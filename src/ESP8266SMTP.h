@@ -40,14 +40,15 @@ class ESP8266SMTPHelper
 	ESP8266SMTPHelper() = default;
 	ESP8266SMTPHelper(const char*, const char*);
 	~ESP8266SMTPHelper();
-	ESP8266SMTPHelper
-		&setPort(uint16_t),
-		&setServer(const char*),
-		&Subject(const char*),
-		&setFrom(const char*),
-		&setEmail(const char*),
-		&setPassword(const char*),
-		&setForGmail();
+	ESP8266SMTPHelper&
+		setPort(uint16_t),
+		setServer(const char*),
+		Subject(const char*),
+		setFrom(const char*),
+		setEmail(const char*),
+		setPassword(const char*),
+		setForGmail(void),
+	        setForStrato(void);
 	char* getBase64Email();
 	char* getBase64Password();
 
