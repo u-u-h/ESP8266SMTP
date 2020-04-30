@@ -75,6 +75,13 @@ ESP8266SMTPHelper& ESP8266SMTPHelper::setForGmail()
 	return *this;
 }
 
+ESP8266SMTPHelper& ESP8266SMTPHelper::setForStrato()
+{
+	_smtp_port = 465;
+	setServer("smtp.strato.de");
+	return *this;
+}
+
 char* ESP8266SMTPHelper::getBase64Email()
 {
 	return _base64_login;
